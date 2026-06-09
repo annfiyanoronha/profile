@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyProfile | Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    color:white;
+    overflow-x:hidden;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* Navigation */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#60a5fa;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* Hero Section */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:70px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+    text-shadow:0 0 25px rgba(255,255,255,0.5);
+}
+
+.hero h2{
+    color:#93c5fd;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(45deg,#2563eb,#7c3aed);
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+}
+
+/* Sections */
+
+section{
+    padding:80px 10%;
+}
+
+#about,
+#skills,
+#passion,
+#projects,
+#contact{
+    background:rgba(15,23,42,0.75);
+    backdrop-filter:blur(15px);
+    margin:40px;
+    border-radius:25px;
+    padding:60px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:40px;
+    color:#93c5fd;
+}
+
+/* Cards */
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:20px;
+    padding:30px;
+    transition:0.4s;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#60a5fa;
+    margin-bottom:12px;
+}
+
+/* Skills */
+
+.skill{
+    margin-bottom:20px;
+}
+
+.skill-name{
+    margin-bottom:8px;
+}
+
+.bar{
+    background:#334155;
+    height:12px;
+    border-radius:20px;
+}
+
+.progress{
+    height:12px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#3b82f6,#8b5cf6);
+}
+
+/* Contact */
+
+.contact-links{
+    text-align:center;
+}
+
+.contact-links a{
+    display:inline-block;
+    margin:10px;
+    padding:12px 22px;
+    background:linear-gradient(45deg,#2563eb,#7c3aed);
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.contact-links a:hover{
+    transform:scale(1.05);
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.4);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero h2{
+    font-size:22px;
+}
+
+nav{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">MyProfile</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#passion">Passion</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>ANN FIYA NORONHA</h1>
+
+<h2>Engineering Student • AI Enthusiast • Web Developer</h2>
+
+<p>
+Exploring Artificial Intelligence, building innovative web applications,
+and continuously learning emerging technologies to create meaningful
+digital experiences.
+</p>
+
+<a href="#about" class="btn">Explore Portfolio</a>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+I am a passionate engineering student with a strong interest in
+Artificial Intelligence, Web Development, and innovative technologies.
+I enjoy building projects, learning new skills, and exploring creative
+solutions to real-world challenges.
+</p>
+
+</div>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skill">
+<div class="skill-name">HTML & CSS</div>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">JavaScript</div>
+<div class="bar"><div class="progress" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Python</div>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Artificial Intelligence</div>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+</div>
+
+</section>
+
+<!-- Passion -->
+
+<section id="passion">
+
+<h2 class="section-title">My Passion</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>Exploring AI tools, machine learning, and future technologies.</p>
+</div>
+
+<div class="card">
+<h3>Web Development</h3>
+<p>Designing modern and user-friendly websites and applications.</p>
+</div>
+
+<div class="card">
+<h3>Continuous Learning</h3>
+<p>Learning new technologies and improving technical skills every day.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Travel Explorer Website</h3>
+<p>AI-powered travel planning and destination discovery platform.</p>
+</div>
+
+<div class="card">
+<h3>Country Information Portal</h3>
+<p>Interactive website for exploring countries, culture, landmarks, and tourism.</p>
+</div>
+
+<div class="card">
+<h3>Hair Care Assistant</h3>
+<p>Personalized hair-care recommendation system using AI concepts.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-links">
+
+<a href="mailto:yourmail@example.com">Email</a>
+
+<a href="https://github.com/yourusername" target="_blank">
+GitHub
+</a>
+
+<a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+LinkedIn
+</a>
+
+<a href="https://twitter.com" target="_blank">
+Twitter
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 MyProfile Portfolio | Designed by Ann Fiya Noronha</p>
+
+</footer>
+
+</body>
+</html>
